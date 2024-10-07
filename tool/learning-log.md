@@ -58,7 +58,7 @@ add([
 
 * The parenthesis next to the `rect` has to values: width and height. Width comes before height in the syntax. As for the value inside the `circle` parenthesis, it represents the radius of the shape which has a direct correlation with size: the higher the radius, the bigger the circle.
 
-* Next Step: To test out sprites and learn more about shapes
+* Next Step: To test out sprites and learn more about shapes + watching youtube videos to guide me through the tool's features
 <!--
 
 ### X/X/XX:
