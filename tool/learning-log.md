@@ -60,7 +60,21 @@ add([
 
 * The parenthesis next to the `rect` has to values: width and height. Width comes before height in the syntax. As for the value inside the `circle` parenthesis, it represents the radius of the shape which has a direct correlation with size: the higher the radius, the bigger the circle.
 
-* Next Steps: Watch youtube videos to guide me through the tool's features and focus on sprites
+* The last feature I focused on was sprites
+    * I imported a template from Kaboom called "mygame" and downloaded an image and then uploaded it to the sprite folder. Subsequently, I used this code to load the sprite:
+
+``` JS
+k.loadSprite("smiley", "sprites/smileyOne.jpg")
+
+add([
+    sprite("smiley"),
+])
+
+```
+
+Note: The first quotation marks in the `loadSprite` parenthesis is the name you desire the image to be. The second quotation is to get the file path for the image to display it.
+
+* Next Steps: Watch youtube videos to guide me through the tool's features and continue to focus on sprites
 <!--
 
 ### X/X/XX:
