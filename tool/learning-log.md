@@ -24,7 +24,7 @@ Note: `add` is classified as a game objective. It adds components into a game yo
 
 * I learned that `pos` is used to position elements and `text` makes it possible to input a text into the screen
 * The next feature I tested was `size`, `font`, and `width`
- * In the already existing `add` bracket, I added all three attributes underneath `pos`. The result looked like this:
+  * In the already existing `add` bracket, I added all three attributes underneath `pos`. The result looked like this:
 
  ``` JS
 add([
@@ -40,7 +40,7 @@ add([
 Note: To apply attributes that edit text, there must be a comma and another bracket inside of the already existing parenthesis of `text()`. There must also be an ending bracket.
 
 * Another feature I tested was adding shapes and adjusting its properties (particularly size)
-    * I looked through the shapes section of the documentation under "components" and looked through the existing examples given.
+    * I looked through the shapes section of the documentation under "components" and looked through the existing examples given
         * The codes I imported from [Kaboom](https://kaboomjs.com/#polygon) and edited in the end were these:
 
  ``` JS
