@@ -20,7 +20,7 @@ add([
 ]);
 ```
 Note: `add` is classified as a game objective. It adds components into a game you desire. Therefore, all of these components must be added into an `add` bracket to appear. Everything after parenthesis also end with a comma.
-Note #2:
+
 
 * I learned that `pos` is used to position elements and `text` makes it possible to input a text into the screen
 * The next feature I tested was `size`, `font`, and `width`
@@ -37,7 +37,7 @@ add([
     }),
 ]);
  ```
-NOTE: To apply attributes that edit text, there must be a comma and another bracket inside of the already existing parenthesis of `text()`. There must also be an ending bracket.
+Note: To apply attributes that edit text, there must be a comma and another bracket inside of the already existing parenthesis of `text()`. There must also be an ending bracket.
 
 * Another feature I tested was adding shapes and adjusting its properties (particularly size)
     * I looked through the shapes section of the documentation under "components" and looked through the existing examples given.
