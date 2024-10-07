@@ -19,7 +19,8 @@ add([
     pos(120, 80),
 ]);
 ```
-Note: All of these functions must be added into an `add` bracket to appear. Everything after parenthesis also end with a comma.
+Note: `add` is classified as a game objective. It adds components into a game you desire. Therefore, all of these components must be added into an `add` bracket to appear. Everything after parenthesis also end with a comma.
+Note #2:
 
 * I learned that `pos` is used to position elements and `text` makes it possible to input a text into the screen
 * The next feature I tested was `size`, `font`, and `width`
@@ -38,8 +39,9 @@ add([
  ```
 NOTE: To apply attributes that edit text, there must be a comma and another bracket inside of the already existing parenthesis of `text()`. There must also be an ending bracket.
 
-* The next feature I tested was adding shapes.
- * The codes I imported from [Kaboom](https://kaboomjs.com/#polygon) and edited were these:
+* Another feature I tested was adding shapes and adjusting its properties (particularly size)
+    * I looked through the shapes section of the documentation under "components" and looked through the existing examples given.
+        * The codes I imported from [Kaboom](https://kaboomjs.com/#polygon) and edited in the end were these:
 
  ``` JS
  add([
@@ -58,7 +60,7 @@ add([
 
 * The parenthesis next to the `rect` has to values: width and height. Width comes before height in the syntax. As for the value inside the `circle` parenthesis, it represents the radius of the shape which has a direct correlation with size: the higher the radius, the bigger the circle.
 
-* Next Step: To test out sprites and learn more about shapes + watching youtube videos to guide me through the tool's features
+* Next Steps: Watch youtube videos to guide me through the tool's features and focus on sprites
 <!--
 
 ### X/X/XX:
