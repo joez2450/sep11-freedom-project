@@ -74,7 +74,13 @@ add([
 
 Note: The first quotation marks in the `loadSprite` parenthesis is the name you desire the image to be. The second quotation is to get the file path for the image to display it.
 
+Note #2: A sprite is an image or animation that is used in a game
+
 * Next Steps: Watch youtube videos to guide me through the tool's features and continue to focus on sprites
+
+
+
+
 <!--
 
 ### X/X/XX:
