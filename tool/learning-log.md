@@ -76,10 +76,32 @@ Note: The first quotation marks in the `loadSprite` parenthesis is the name you 
 
 Note #2: A sprite is generally an image or animation that is used in a game
 
-* Next Steps: Watch youtube videos to guide me through the tool's features and continue to focus on sprites
+* Next Steps: Watch youtube videos to guide me through the tool's features and continue to focus on sprites properties and movement mechanics
+
+### X/X/XX: 10/21/23
+* I watched a [youtube video](https://www.youtube.com/watch?v=WevIqoWS2L8&list=PLu9YVdNl8Gec9Tn_YWS9XMEy7UCdOi-FQ&index=3) and followed through a Kaboom [intro documentation](https://kaboomjs.com/doc/intro)
+* I added a new platform and set a gravity along with a body component so that my existing sprites would fall down.
+    * I made the platform static so the sprites cannot go through to the void.
+
+``` Js
+const bean = add([
+    sprite("bean"),
+    pos(50, 30),
+    area(),
+    body(),
+])
 
 
-
+add([
+    rect(width(), 70),
+    pos(0, height() - 100),
+    outline(4),
+    area(),
+    body({ isStatic: true }),
+    color(127, 200, 255),
+])
+```
+NOTE: Static means to stay in place. It is not dynamic.
 
 <!--
 
