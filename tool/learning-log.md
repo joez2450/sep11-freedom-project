@@ -76,21 +76,21 @@ Note: The first quotation marks in the `loadSprite` parenthesis is the name you 
 
 Note #2: A sprite is generally an image or animation that is used in a game
 
-* Next Steps: Watch youtube videos to guide me through the tool's features and continue to focus on sprites properties and movement mechanics
+* Next Steps: Watch youtube videos to guide me through the tool's features and continue to focus on sprites properties and start movement mechanics
 
-### X/X/XX: 10/21/23
+### 10/21/23
 * I watched a [youtube video](https://www.youtube.com/watch?v=WevIqoWS2L8&list=PLu9YVdNl8Gec9Tn_YWS9XMEy7UCdOi-FQ&index=3) and followed through a Kaboom [intro documentation](https://kaboomjs.com/doc/intro)
 * I added a new platform and set a gravity along with a body component so that my existing sprites would fall down.
-    * I made the platform static so the sprites cannot go through to the void.
+    * I made the platform static so the sprites cannot go through to the void. The code to all of these actions was:
 
 ``` Js
+k.setGravity(2400)
 const bean = add([
     sprite("bean"),
     pos(50, 30),
     area(),
     body(),
 ])
-
 
 add([
     rect(width(), 70),
@@ -101,7 +101,48 @@ add([
     color(127, 200, 255),
 ])
 ```
-NOTE: Static means to stay in place. It is not dynamic.
+NOTE: Static means to stay in place. It is not dynamic - or changing. The `area` component adds a collider to a sprite so when it hits something, there will be a collision.
+
+* Next, I added a feature where sprites could jump. I imported a set of code from Kaboom to make it where when once one button is held down, my sprite would jump. The code to all of this was:
+
+```Js
+
+onKeyPress("space", () => {
+    if (bean.isGrounded()) {
+        bean.jump();
+    }
+});
+```
+Note: If the `if` statement with `bean.isGrounded` was removed from the set of code, a sprite can jump infinitely in the air without any barriers like Flappy Bird. The statement restricts it to where the sprite can only jump when it is on the ground.
+
+* I added obstacles on the platform subsequently. I used the rectangle component and set a certain dimension of (40, 50) to make jumps possible.
+    * I used the `pos` component and set it to a height of `height() - 100` to position the rectangle to an angle in the air. I also used the static feature to make the shape an unpassable object.
+        * I added a loop so there was a continous amount of obstacles that appeared.
+``` Js
+
+loop(1, () => {
+add([
+    rect(40, 50),
+    area(),
+    pos(width(), height() - 100),
+    anchor("botleft"),
+    color(255, 180, 255),
+    body({ isStatic: true }),
+    move(LEFT, 1000),
+]);
+});
+
+```
+Note: The `move` component allows your screen to move in a direction infinitely. In the example, the sprite is always moving to the left side because it is given the value of `LEFT`. The number besides the direction indicates the movement of pixel per second, so the higher the value, the faster a sprite goes.
+
+Note #2: The `color` component uses RGB values
+
+
+
+
+
+
+
 
 <!--
 
