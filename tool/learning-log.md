@@ -135,9 +135,23 @@ add([
 ```
 Note: The `move` component allows your screen to move in a direction infinitely. In the example, the sprite is always moving to the left side because it is given the value of `LEFT`. The number besides the direction indicates the movement of pixel per second, so the higher the value, the faster a sprite goes.
 
-Note #2: The `color` component uses RGB values
+Note #2: The `color` component uses RGB values. Additionally the number besides the loop indicates how many seconds it would take for another obstacle to appear.
+
+* At last, I followed the tutorial to make my sprite shake whenever it hits an obstacle. I used the `.oncollide` and `.shake` component as shown on the documentation and used a keyword to put onto my sprite in order for the effect to work. The code looked like this:
 
 
+```Js
+
+bean.onCollide("happy", () => {
+    addKaboom(bean.pos);
+    shake();
+});
+
+```
+
+Note: The "happy" inside the parenthesis is a keytag that allows the obstacle to make the sprite shake once it collides. If a obstacle doesn't contain the tag, then there will be no shake effect.
+
+Next Step: Continue to explore the intro document and learn new components 
 
 
 
