@@ -151,7 +151,7 @@ bean.onCollide("happy", () => {
 
 Note: The "happy" inside the parenthesis is a keytag that allows the obstacle to make the sprite shake once it collides. If a obstacle doesn't contain the tag, then there will be no shake effect.
 
-Next Step: Continue to explore the intro document and learn new components 
+Next Steps: Continue to explore the intro document and learn new components 
 
 
 
