@@ -78,7 +78,7 @@ Note #2: A sprite is generally an image or animation that is used in a game
 
 * Next Steps: Watch youtube videos to guide me through the tool's features and continue to focus on sprites properties and start movement mechanics
 
-### 10/21/23
+### 10/21/24
 * I watched a [youtube video](https://www.youtube.com/watch?v=WevIqoWS2L8&list=PLu9YVdNl8Gec9Tn_YWS9XMEy7UCdOi-FQ&index=3) and followed through a Kaboom [intro documentation](https://kaboomjs.com/doc/intro)
 * I added a new platform and set a gravity along with a body component so that my existing sprites would fall down.
     * I made the platform static so the sprites cannot go through to the void. The code to all of these actions was:
@@ -151,10 +151,31 @@ bean.onCollide("happy", () => {
 
 Note: The "happy" inside the parenthesis is a keytag that allows the obstacle to make the sprite shake once it collides. If a obstacle doesn't contain the tag, then there will be no shake effect.
 
-Next Steps: Continue to explore the intro document and learn new components 
+Next Steps: Continue to explore the intro document and learn new components
 
 
+### 11/3/24
+* My first step was to look back into the [intro document](https://kaboomjs.com/doc/intro) from last time
+ * This week, I wanted to make a score counter and game over screen for the intro game that I previously worked on. These were my two main objectives.
+* As for creating the score counter, I followed the tutorial and created a new variable with the value of `add` game objective and the components of `text` and `pos` within it. I readjusted the position to match the game while adding "Score" within the `text` parenthesis. Additionally, I created a variable `score` and set it to the value of 0. In the end, my code looked like this:
 
+``` Js
+let score = 0;
+
+    const scoreLabel = add([
+        text(score),
+        pos(24, 24),
+    ]);
+
+```
+* After creating a score tracker, I created a new function that would update the numbers by every frame. In the tutorial, it recommended that I used increments (`++`) from JavaScript and set `scoreLabel` to `score`. I followed the steps and created a system that actively updates a user's score when playing the game. The results looked like this:
+
+```Js
+ onUpdate(() => {
+        score++;
+        scoreLabel.text = score;
+    });
+```
 
 
 
