@@ -179,6 +179,17 @@ let score = 0;
 
 Note: This system makes it where the value of `scoreLabel.text` increases by one in a frame per second, or in other words, depending on FPS, your score will go up drastically.
 
+* Additionally, I learned the `wait(rand(number, number), functionName)` component. I used it as an alternative from using loops to generate more obstacles at a interval:
+
+``` Js
+wait(rand(1, 2), spawnTree);
+```
+
+Note: For every 1-2 seconds, a function with whatever shape conditions inside will occur. Therefore, an unlimited amount of obstacles can solely be generated through this code. The `wait` is depended on `rand(1,2)`, which then takes effect of the function.
+
+
+
+
 
 <!--
 
