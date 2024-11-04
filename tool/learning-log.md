@@ -177,6 +177,7 @@ let score = 0;
     });
 ```
 
+Note: This system makes it where the value of `scoreLabel.text` increases by one in a frame per second, or in other words, depending on FPS, your score will go up drastically.
 
 
 <!--
