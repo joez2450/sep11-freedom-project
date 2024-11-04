@@ -156,7 +156,7 @@ Next Steps: Continue to explore the intro document and learn new components
 
 ### 11/3/24
 * My first step was to look back into the [intro document](https://kaboomjs.com/doc/intro) from last time
- * This week, I wanted to make a score counter and game over screen for the intro game that I previously worked on. These were my two main objectives.
+ * This week, I wanted to make a score counter and game over screen for the intro game that I previously worked on. These were my two main objectives. I also wanted to learn any additional components that can be implemented for my future game.
 * As for creating the score counter, I followed the tutorial and created a new variable with the value of `add` game objective and the components of `text` and `pos` within it. I readjusted the position to match the game while adding "Score" within the `text` parenthesis. Additionally, I created a variable `score` and set it to the value of 0. In the end, my code looked like this:
 
 ``` Js
