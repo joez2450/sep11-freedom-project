@@ -203,7 +203,7 @@ scene("lose", () => {
     ])
 })
 
-  onClick(() => go("game"));
+  onClick(() => go("start"));
 ```
 
 Next Steps: Try to make a simple game of my own and continue to watch tutorials to learn new components
