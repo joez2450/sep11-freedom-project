@@ -185,7 +185,7 @@ Note: This system makes it where the value of `scoreLabel.text` increases by one
 wait(rand(1, 2), spawnTree);
 ```
 
-Note: For every 1-2 seconds, a function with whatever shape conditions inside will occur. Therefore, an unlimited amount of obstacles can solely be generated through this code. The `wait` is depended on `rand(1,2)`, which then takes effect of the function.
+Note: For every 1-2 seconds, a function with whatever shape conditions (rectangles, triangles, circles) inside will be executed by the `rand` component. Therefore, an unlimited amount of obstacles can solely be generated through this code. The `wait` also depends on `rand(1,2)`, which then affects the function.
 
 * I used a `scene` component syntax and included a key tag of "lose". Inside `scene`, I used the `add` component and included a `text` of "Game Over!". Additionally, I created another `scene` with a key tag of "start" and used `add` to input a sprite. Afterward, I utilized a new component `go` with "start" along with `onClick` so that when a user loses the game, they could respawn with a click. In the end, the code looked like this:
 
