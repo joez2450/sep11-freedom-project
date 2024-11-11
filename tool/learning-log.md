@@ -154,7 +154,7 @@ Note: The "happy" inside the parenthesis is a keytag that allows the obstacle to
 Next Steps: Continue to explore the intro document and learn new components
 
 
-### 11/3/24
+### 11/4/24
 * My first step was to look back into the [intro document](https://kaboomjs.com/doc/intro) from last time
  * This week, I wanted to make a score counter and game over screen for the intro game that I previously worked on. These were my two main objectives. I also wanted to learn any additional components that can be implemented for my future game.
 * As for creating the score counter, I followed the tutorial and created a new variable with the value of `add` game objective and the components of `text` and `pos` within it. I readjusted the position to match the game while adding "Score" within the `text` parenthesis. Additionally, I created a variable `score` and set it to the value of 0. In the end, my code looked like this:
@@ -187,7 +187,7 @@ wait(rand(1, 2), spawnTree);
 
 Note: For every 1-2 seconds, a function with whatever shape conditions inside will occur. Therefore, an unlimited amount of obstacles can solely be generated through this code. The `wait` is depended on `rand(1,2)`, which then takes effect of the function.
 
-* I used a `scene` component syntax and included a key tag of "lose". Inside `scene`, I used the `add` component and included a `text` of "Game Over!". Additionally, I created another `scene` with a key tag of "start" and used `add` to input a sprite. Afterward, I utilized a new component `go` with "start" along with `onClick` so that when a user loses they could respawn with a click. In the end, the code looked like this:
+* I used a `scene` component syntax and included a key tag of "lose". Inside `scene`, I used the `add` component and included a `text` of "Game Over!". Additionally, I created another `scene` with a key tag of "start" and used `add` to input a sprite. Afterward, I utilized a new component `go` with "start" along with `onClick` so that when a user loses the game, they could respawn with a click. In the end, the code looked like this:
 
 ``` Js
 
