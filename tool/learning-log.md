@@ -206,7 +206,7 @@ scene("lose", () => {
   onClick(() => go("start"));
 ```
 
-Next Steps: To continue to watch tutorials to learn new components and to build on the game
+Next Steps: To continue to review tutorials to learn new components and to build on the game
 
 
 ### 11/18/24
