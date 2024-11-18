@@ -206,7 +206,17 @@ scene("lose", () => {
   onClick(() => go("start"));
 ```
 
-Next Steps: Try to make a simple game of my own and continue to watch tutorials to learn new components
+Next Steps: To continue to watch tutorials to learn new components and to build on the game
+
+
+### 11/18/24
+* This week, my main agenda was to continue to learn components that Kaboom has to offer and add more to the tutorial game
+
+
+
+
+
+
 <!--
 
 ### X/X/XX:
