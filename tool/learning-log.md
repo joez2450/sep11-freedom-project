@@ -227,7 +227,7 @@ const player = add([
 ``` JS
 loadSprite("smiley", "sprites/smileyOne.jpg")
 ```
-* A new component I learned was `onLoading` and the way to edit loading screens. On the Kaboom [playground tutorial](), I went to see the syntax and reviewed each code. Then, in my IDE I created a `onLoading` event that included `drawRect`, `drawCircle`, and `drawText` each with their respective attributes.
+* A new component I learned was `onLoading` and the way to edit loading screens. On the Kaboom [playground tutorial](https://kaboomjs.com/play?example=loader), I went to see the syntax and reviewed each code. Then, in my IDE I created a `onLoading` event that included three other components:`drawRect`, `drawCircle`, and `drawText`. I added  respective attributes to each one of them.
     * I made the color of `drawRect` with a yellow RGB to have a colored background screen. I utilized `drawCircle` the same way from the website. Subsequently, `drawText` was used to display a "loading" text on the screen while the game assets were loading. I also used the same `repeat(wave(1, 4, time() * 12))` code, which was a mathematical operation. The code looked like this:
 
     ``` JS
@@ -255,6 +255,21 @@ loadSprite("smiley", "sprites/smileyOne.jpg")
     ```
 * NOTE: The radius within `drawCircle` determines the size of the circle. The `repeat(wave(1, 4, time() * 12))` code is reponsible for the "..." animation next to the text "loading" by setting a timed interval in which the event would repeat.
 * NOTE #2: In summary, the `onLoading` event loads a visual while all of the other assets are registering. This event tool can be useful especially for creating loading screens.
+
+* I also utilized a `wait` component that would load a new sprite into a scene within a 3 second set interval. Visual of the code:
+
+``` JS
+    wait(3, () => {
+        add([
+            sprite("bean"),
+            pos(291, 0),
+            area(),
+            body(),
+        ]);
+
+    })
+```
+NOTE: In 3 seconds, a the sprite "bean" would be spawned into the game scene. In order for the sprite to have the same effects as the original, there would need to be more code to modify its properties. The `wait` component is useful for adding sudden events in a game.
 
 * Next Steps: Create a new file and incorporate various components that I have already learned into a scene, while also continuing to learn new concepts
 
