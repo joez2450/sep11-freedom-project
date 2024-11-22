@@ -211,10 +211,52 @@ Next Steps: To continue to review tutorials to learn new components and to build
 
 ### 11/18/24
 * This week, my main agenda was to continue to learn components that Kaboom has to offer and add more to the tutorial game
+* I adjusted the position of my sprite using `center()` asset, so that it would spawn in the center of the screen instead of a specific (x,y) position
+``` JS
+const player = add([
+        // list of components
+        sprite("dino"),
+        pos(center()),
+        area(),
+        body(),
+    ]);
+```
+* Additionally, I swapped the default sprite to one that I desire. I gathered a new image and downloaded its file. I then uploaded it to GitHub, and transported into my repository.
+ * I loaded the sprite and changed the remaining codes with the tag "bean". The code looked like this:
+
+``` JS
+loadSprite("smiley", "sprites/smileyOne.jpg")
+```
+* A new component I learned was `onLoading` and the way to edit loading screens. On the Kaboom [playground tutorial](), I went to see the syntax and reviewed each code. Then, in my IDE I created a `onLoading` event that included `drawRect`, `drawCircle`, and `drawText` each with their respective attributes.
+    * I made the color of `drawRect` with a yellow RGB to have a colored background screen. I utilized `drawCircle` the same way from the website. Subsequently, `drawText` was used to display a "loading" text on the screen while the game assets were loading. I also used the same `repeat(wave(1, 4, time() * 12))` code, which was a mathematical operation. The code looked like this:
+
+    ``` JS
+  onLoading((progress) => {
+
+        drawRect({
+            width: width(),
+            height: height(),
+            color: rgb(182, 218, 14),
+        })
 
 
+        drawCircle({
+            pos: center(),
+            radius: 43,
+            end: map(progress, 0, 1, 0, 360),
+        })
 
+        drawText({
+            text: "loading" + ".".repeat(wave(1, 4, time() * 12)),
+            font: "monospace",
+            size: 36,
+            pos: center().add(0, 70),
+        })
+    ```
+* NOTE: The radius within `drawCircle` determines the size of the circle. The `repeat(wave(1, 4, time() * 12))` code is reponsible for the "..." animation next to the text "loading" by setting a timed interval in which the event would repeat.
+* NOTE #2: In summary, the `onLoading` event loads a visual while all of the other assets are registering. This event tool can be useful especially for creating loading screens.
 
+* Next Steps: Create a new file and incorporate various components that I have already learned into a scene
 
 
 <!--
