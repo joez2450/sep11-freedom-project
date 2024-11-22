@@ -256,7 +256,7 @@ loadSprite("smiley", "sprites/smileyOne.jpg")
 * NOTE: The radius within `drawCircle` determines the size of the circle. The `repeat(wave(1, 4, time() * 12))` code is reponsible for the "..." animation next to the text "loading" by setting a timed interval in which the event would repeat.
 * NOTE #2: In summary, the `onLoading` event loads a visual while all of the other assets are registering. This event tool can be useful especially for creating loading screens.
 
-* Next Steps: Create a new file and incorporate various components that I have already learned into a scene
+* Next Steps: Create a new file and incorporate various components that I have already learned into a scene, while also continuing to learn new concepts
 
 
 <!--
