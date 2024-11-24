@@ -222,11 +222,8 @@ const player = add([
     ]);
 ```
 * Additionally, I swapped the default sprite to one that I desire. I gathered a new image and downloaded its file. I then uploaded it to GitHub, and transported into my repository.
- * I loaded the sprite and changed the remaining codes with the tag "bean". The code looked like this:
+ * I loaded the sprite using `loadsprite()` and changed the remaining codes with the tag "bean". I then used `scale()` and inserted a value of 0.7 within the parenthesis in order to lower the size of the sprite.
 
-``` JS
-loadSprite("smiley", "sprites/smileyOne.jpg")
-```
 * A new component I learned was `onLoading` and the way to edit loading screens. On the Kaboom [playground tutorial](https://kaboomjs.com/play?example=loader), I went to see the syntax and reviewed each code. Then, in my IDE I created a `onLoading` event that included three other components:`drawRect`, `drawCircle`, and `drawText`. I added  respective attributes to each one of them.
     * I made the color of `drawRect` with a yellow RGB to have a colored background screen. I utilized `drawCircle` the same way from the website. Subsequently, `drawText` was used to display a "loading" text on the screen while the game assets were loading. I also used the same `repeat(wave(1, 4, time() * 12))` code, which was a mathematical operation. The code looked like this:
 
