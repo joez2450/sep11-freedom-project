@@ -318,6 +318,17 @@ tiles: {
 ```
 NOTE: All of the symbols can be given its own properties.
 
+* At last, I added parameters into the scene so there would be a score counter. I used `scene("game", ({ levelIdx, score })`. I also created a new function so once a user spawns, the score would be initialized at zero:
+
+```JS
+function start() {
+    go("game", {
+        levelIdx: 0,
+        score: 0,
+    })
+}
+```
+
 Next Steps: Continue to explore new components while also modifying and creating levels
 
 
