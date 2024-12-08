@@ -270,6 +270,56 @@ NOTE: In 3 seconds, a the sprite "bean" would be spawned into the game scene. In
 
 * Next Steps: Create a new file and incorporate various components that I have already learned into a scene, while also continuing to learn new concepts
 
+### 12/2/24
+* I browsed the Kaboom documentation page and focused on the concept of `addLevel` which is categorized under the level section.
+  * I imported two new sprites to use as I wanted to create a separate level with blocks and spikes. In a new file, I added the same code from my previous game to build upon it.
+* I used `loadsprite` to define my sprites into the Kaboom scene. Additionally, I used `addLevel`to build out a new scene using symbols. I used `^` to represent the spike sprite. As my second symbol, I used `>` to represent blocks. I utilized `@` to represent the player sprite. I then wrote out a line of code using the new component I learned to build a level layout:
+
+``` JS
+const LEVELS = [
+    [
+        "@  ^^  ^^    ^^ ^^  >",
+        ">>>>>>>>>>>>>>>>>>>>>>>>>",
+    ],
+]
+
+```
+NOTE: The symbols represent the sprites and the location where they would be placed. The symbols in `addLevel` does not always need to contain sprites. It can include other features.
+* Another step of using `addLevel` was to include properties of the symbol. I scaled down my spike and sprites using `scale` and also positioned them with `pos`. I also added a static body to the blocks so that the character sprite can land on it rather than fall through:
+
+``` JS
+tiles: {
+            "@": () => [
+                sprite("bean"),
+                area(),
+                body(),
+                anchor("bot"),
+                "bean",
+            ],
+
+            "^": () => [
+                sprite("spike"),
+                area(),
+                anchor("bot"),
+                scale(.2),
+
+            ],
+            ">": () => [
+                sprite("block"),
+                area(),
+                anchor("bot"),
+                scale(.01),
+                pos(50, 350),
+                body({ isStatic: true }),
+                anchor("bot"),
+            ],
+        },
+
+```
+NOTE: All of the symbols can be given its own properties.
+
+Next Steps: Continue to explore new components while also modifying and creating levels
+
 
 <!--
 
