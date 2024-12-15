@@ -1,7 +1,7 @@
 # Entry 2
 ##### 12/9/24
 
-Since the last blog, I have tinkered with the tool I confirmed to stick to for the remainder of the Freedom Project: KaboomJS. I looked over the [documentation](https://kaboomjs.com/) provided by the developers and also watched videos made by experts, and with my imported repository from last time, I learned various components while following a tutorial to build a startup game, which was a regular obstacle course where a user would continuously move to the left and jump to progress.
+Since the last blog, I have tinkered with the tool I confirmed to stick to for the remainder of the Freedom Project: KaboomJS. I looked over the [documentation](https://kaboomjs.com/) provided by the developers and also watched [videos](https://www.youtube.com/watch?v=iRXI6ThRJvM&list=PLNwtXgWIx3rgk68WwrykC7BIJ50kT6ZpS) made by experts, and with my imported repository from last time, I learned various components while following a tutorial to build a startup game, which was a regular obstacle course where a user would continuously move to the left and jump to progress.
 
 To start with creating the game for my tinkering process, I made a new platform so that the default sprite could land on a static body and not through the map. I used `add()`, and within it, I included a rectangle with the  dimensions `(width(), 48)`. Additionally, to make the floor static, I used the `body()` component and within the parenthesis, I added `{ isStatic: true }`. I also positioned the platform using `pos()` and the following attributes: `0, height() - 48`. This made it so the platform would touch the bottom of the screen.
 
