@@ -17,6 +17,12 @@ My overall tinkering process was insightful in the long-run as I can see how som
 Currently, I am on the second stage of the Engineering Design Process: Research the Problem. I am still researching the attention span problem in an educational setting. Additionally, I am also conducting further analysis to find specific causes to the issue. By the time I reach stage three, I will include my research findings to develop a solution to the problem.
 
 #### Skills
+##### Effectively Evaluating Documents
+While tinkering with KaboomJS, I looked on the documentation provided by the developers and to learn the tool, I needed to navigate through a multiface of components with a variety of explanations that sums the syntaxes. In other words, I needed to evalute the contents effectively so I could make the best out of my tinkering process.
+
+##### Management
+Tinkering with a new tool is difficult since you have to learn everything from scratch. Especially all of the components that makes up the tool is overwhelming. While I already had some knowledge from tinkering to solidify a tool, I was still at a basic level. There were more components I needed to learn and so I started to manage my work, whether it is time or organization, in order to learn productively.                   
+
 
 [Previous](entry01.md) | [Next](entry03.md)
 
