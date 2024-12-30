@@ -329,9 +329,56 @@ function start() {
 }
 ```
 
-Next Steps: Continue to explore new components while also modifying and creating levels
+Next Steps: Continue to explore new components while also modifying my level and sprites
+
+### 12/16/24
+* My main goal for this week is to modify sprites and continue to the learn new components using the [Kaboom documentation](https://kaboomjs.com/).
+
+* In the previous level I created, I continued to modify the user sprite which I added.
+    * I used the `onKeyDown` component to set a keybind for the sprite to move left or right.
+         * I created two distinct components and within the parenthesis added "left" and "right" to indicate the keybind needed in order for the conditions inside to register on the game scene. Inside both components, I added `bean.move` and included the values of `(-SPEED, 0)` for left and `(-SPEED, 0)` in the right one.
+
+``` JS
+onKeyDown("left", () => {
+    bean.move(-SPEED, 0)
+})
 
 
+onKeyDown("right", () => {
+    bean.move(SPEED, 0)
+})
+
+```
+
+NOTE: Speed is a set variable with a value of 400. In the right `OnKeyDown`, the value of speed allows the user sprite to move to the right when the key is pressed down. In the left, speed has a negative sign in the front to initiate an inverse value that will allow the sprite to move to the left.
+
+* Additionally, I imported a new sprite that represented a distinct block, which I named "bk" into the game scene. I gave the sprite the symbol ">" so that I could manage to place it in the level.
+
+    * Then, I organized the level by rearranging the symbols accordingly to the way I envisioned. The code looked like this:
+
+
+```
+  [
+        "@",
+        ">   >   >  >  >  >   >   >   >   >   >",
+    ],
+
+```
+
+NOTE: The `@` symbol represents the user sprite. The spaces in between the `>` creates a space between each block sprite.
+
+* I modified the sprite's properties by applying ` body({ isStatic: true })` and ` scale(0.2)`.
+* I tested out the `onUpdate` component on the user sprite. I included that if the user sprite's Y position was greater than or equal to 480, the scene will go back to a losing screen, which I created before. The code looked like this:
+
+```JS
+  bean.onUpdate(() => {
+        if (bean.pos.y >= 480) {
+            go("lose")
+        }
+    })
+```
+
+Next Steps: Connect my level to another one either through using `onUpdate` or a seperate component
 <!--
 
 ### X/X/XX:
