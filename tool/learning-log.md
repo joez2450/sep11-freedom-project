@@ -382,25 +382,17 @@ Next Steps: Connect my level to another one either through using `onUpdate` or a
 
 ### 1/6/25
 * I connected by level by adding onto the `LEVELS` variable I created previously that was within the game scene
-    * I added new brackets and created new structures using the symbol >, which represented blocks.
+    * I added new brackets and created new structures using the symbol >, which represented blocks:
+
     ``` JS
-
-const LEVELS = [
-    [
-        "@",
-
-
-        ">  >  >  >  >  >  >  ^",
-    ],
     [
         "@",
         "> > > > > > > >",
     ],
-
-]
     ```
-* I added a portal, which I used a spike sprite to serve the function, using the documentation on Kaboom as a reference. Additionally, I sprite the portal down to 0.2 using `scale()` so that it would match the size of the other sprites.
-    * I used `Player.OnCollide()` and added a conditional within it that checked whether a user was the last level or not (through variable comparisons) and bring them either through a new level or a winning scene if none is left
+* I added a portal, in which I used a spike sprite to serve the function, using the documentation on Kaboom as a reference. Additionally, I scaled the sprite down to 0.2 using `scale()` so that it would match the size of the other entities. I also used `pos()` to rearrange the location of the sprite portal.
+
+    * I used `Player.OnCollide()` and added a conditional within it that checked whether a user was at the last level or not (through variable comparisons). The component would bring the user either to a new level or a winning scene if none is left
 
 ```JS
 if (levelIdx < LEVELS.length - 1) {
@@ -415,20 +407,20 @@ if (levelIdx < LEVELS.length - 1) {
 		}
 
 ```
-NOTE: `levelIdx < LEVELS.length - 1` is a operation that checks the amount of levels within the `LEVEL` variable by the value of `levelIdx` which is the total amount of new platforms there are
+NOTE: `levelIdx < LEVELS.length - 1` is an operation that checks the amount of levels within the `LEVEL` variable by the value of `levelIdx` which is the total amount of new platforms there are
 in the game scene
 
-* I also updated the score counter so that when a user passed one level, the number will increase. This was done inside the conditionals I made.
+* I also updated the score counter so that when a user passes one level, the number will increase. This was done inside the conditionals I made.
 ``` JS
 if (levelIdx < LEVELS.length - 1) {
-			// If there's a next level, go() to the same scene but load the next level
+			// If there's a next level, load the next level in the same game scene
 			go("game", {
-				levelIdx: levelIdx + 1,
-				score: score + 1,
+				levelIdx: levelIdx + 1, // level counter
+				score: score + 1, // increases the score by one
 			})
 
 ```
-* Additionally, I made sure that in every `go` component, the number was refreshed so the computer knows the defined score at all times.
+* Additionally, I made sure that in every `go` component, the number was refreshed so the computer knew the defined score at all times.
 
 Next Steps: Work on modifying the new level and create a new one after it
 
