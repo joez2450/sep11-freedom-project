@@ -382,11 +382,24 @@ Next Steps: Connect my level to another one either through using `onUpdate` or a
 
 ### 1/6/25
 * I connected by level by adding onto the `LEVELS` variable I created previously that was within the game scene
-    * I added new brackets and created new structures using the symbol ()>) which represented blocks.
-    ```
+    * I added new brackets and created new structures using the symbol >, which represented blocks.
+    ``` JS
 
+const LEVELS = [
+    [
+        "@",
+
+
+        ">  >  >  >  >  >  >  ^",
+    ],
+    [
+        "@",
+        "> > > > > > > >",
+    ],
+
+]
     ```
-* I added a portal using the documentation on Kaboom as a reference. Additionally, I scaled the portal down to 0.2 using `scale()` so that it would match the size of the other sprites.
+* I added a portal, which I used a spike sprite to serve the function, using the documentation on Kaboom as a reference. Additionally, I sprite the portal down to 0.2 using `scale()` so that it would match the size of the other sprites.
     * I used `Player.OnCollide()` and added a conditional within it that checked whether a user was the last level or not (through variable comparisons) and bring them either through a new level or a winning scene if none is left
 
 ```JS
@@ -417,7 +430,7 @@ if (levelIdx < LEVELS.length - 1) {
 ```
 * Additionally, I made sure that in every `go` component, the number was refreshed so the computer knows the defined score at all times.
 
-Next Steps: Work on the newer levels I created
+Next Steps: Work on modifying the new level and create a new one after it
 
 
 <!--
