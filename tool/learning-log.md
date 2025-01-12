@@ -381,7 +381,7 @@ NOTE: The `@` symbol represents the user sprite. The spaces in between the `>` c
 Next Steps: Connect my level to another one either through using `onUpdate` or a seperate component
 
 ### 1/6/25
-* I connected by level by adding onto the `LEVELS` variable I created previously that was within the game scene
+* I connected a new level by adding onto the `LEVELS` variable I created previously that was within the game scene
     * I added new brackets and created new structures using the symbol >, which represented blocks:
 
     ``` JS
