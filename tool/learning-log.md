@@ -390,9 +390,8 @@ Next Steps: Connect my level to another one either through using `onUpdate` or a
         "> > > > > > > >",
     ],
     ```
-* I added a portal, in which I used a spike sprite to serve the function, using the documentation on Kaboom as a reference. Additionally, I scaled the sprite down to 0.2 using `scale()` so that it would match the size of the other entities. I also used `pos()` to rearrange the location of the sprite portal.
-
-    * I used `Player.OnCollide()` and added a conditional within it that checked whether a user was at the last level or not (through variable comparisons). The component would bring the user either to a new level or a winning scene if none is left
+* I created a new portal sprite using `k.loadSprite` and gave it a new symbol so I can use it to transition into other levels. Additionally, I scaled the sprite down to 0.2 using `scale()` so that it would match the size of the other entities. I also used `pos()` to rearrange the location of the sprite portal.
+    * Using the [documentation](https://kaboomjs.com/blog) on Kaboom as a reference, I create a new `Player.onCollide()` and added conditionals that would bring a user into a new level or a winning scene depending if they were on the last level or not (through variable comparisions) if it touched the portal sprite.
 
 ```JS
 if (levelIdx < LEVELS.length - 1) {
