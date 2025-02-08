@@ -16,7 +16,7 @@ My overall tinkering process was insightful in the long-run as I can see how som
 
 
 #### EDP
-Currently, I am on the second stage of the Engineering Design Process: Research the Problem. I am still researching the attention span problem in an educational setting. Additionally, I am also conducting further analysis to find specific causes to the issue. By the time I reach stage three, I will include my research findings to develop a solution to the problem.
+Currently, I am on the second stage of the Engineering Design Process: Research the Problem. I am still researching the attention span problem in an educational setting. Additionally, I am also conducting further analysis to find specific causes to the issue, most of which are social media consumption. By the time I reach stage three, I will include my research findings to develop a solution to the problem.
 
 #### Skills
 ##### Effectively Evaluating Documents
