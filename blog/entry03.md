@@ -23,7 +23,7 @@ My starting level looked like this:
 
 Additionally, I started to add more opening and closing brackets in the variable to add more levels. To make the portal work, I created a new tag "portal" and gave it to the sprite. Then, I added a new `.onCollide` so that when the user hits "portal", it would run the code `if (levelIdx < LEVELS.length - 1) {go("game", { levelIdx: levelIdx + 1, score: score + 1,})`, which ultimately checks to see whether there are more levels or not and goes to a new one if there is. If not, then `go("win", { score: score })` would run and the user wins the game.
 
-Recently, I merged files with my partner. We believed that both of us knew enough to start collaboration on a single project. Together we incorporated both of our levels, sprites, and game conditions to form an in-depth interactive play. An addition to the game we formed was spikes. My partner loaded his sprite and gave it the symbol "/" to represent it in the levels. I added a new tag "danger" and gave it to the sprite. With a new `.onCollide`, I made sure that when a user hit the sprite, the code `go("lose", { score: score })` would run, sending them to a losing screen with an end score. My next goal is to add sound effects (death and jump) and a pause method into the game scene with the progress already made.
+Recently, I merged files with my partner. We believed that both of us knew enough to start collaboration on a single project. Together we incorporated both of our levels, sprites, and game conditions to form an in-depth interactive play. An addition to the game we formed was spikes. My partner loaded his sprite and gave it the symbol "/" to represent it in the levels variable. I added a new tag "danger" and gave it to the sprite. With a new `.onCollide`, I made sure that when a user hit the sprite, the code `go("lose", { score: score })` would run, sending them to a losing screen with an end score. My next goal is to add sound effects (death and jump) and a pause method into the game scene with the progress already made.
 
 #### EDP
 As of right now, I am in the third on the Engineering Design Process: Brainstorm Possible Solutions. Now that I learned the concept of creating levels using Kaboom, there are more possible solutions that I can brainstorm with my partner to solve the issue of attention spans in education. I can add a set of engaging levels that could aim to educate users in various subjects while also hooking them in to prevent more doomscrolling. The brainstorming process will help my partner and I choose from a list of innovative problem-solvers by the time we reach stage four, which is to plan a final solution.
@@ -34,7 +34,7 @@ During my tinkering process, I had to refer to the Kaboom documentation as my ma
 
 
 ##### Organization
-While working with my partner, I merged works and creatd a single repository where we could both collaborate. In doing so, I had to be organized because beforehand, my partner and I both had invididual games. We took specific parts from our own files and created an improvised game. Being organized allowed us to work with less issues.
+While working with my partner, I merged works and created a single repository where we could both collaborate. In doing so, I had to be organized because beforehand, my partner and I both had individual games. We took specific parts from our own files and created an improvised game. Being organized allowed us to work with less issues.
 
 
 
