@@ -451,6 +451,8 @@ const LEVELS = [
 ]
 ```
 
+Reminder: A comma is used to indicate the end of a layer in a level. The closing bracket fully concludes the level. If there is another set of quotation marks present, a new layer is created in the same level.
+
 
 * I added a new camera feature using two separate `camPos` enwrapped in `.onUpdate` and  a new component of `.onPhysicsResolve` so that it is always zoomed in onto the user sprite.
 
@@ -478,6 +480,10 @@ const scoreLabel = add([
 	])
 ```
 NOTE: The main function of `fixed()` is to make a component unaffected by the camera.
+
+* I also used `setBackground(206, 242, 241)` to replace the default background and set it to a light blue color.
+
+NOTE: `setBackground` uses RGB values. Additionally, you can also create a background by uploading a new sprite and putting it in `add`. But you also have to use transformation properties to cover the entire screen.
 
 Next Steps: Add coins and more levels while also modifying them
 
