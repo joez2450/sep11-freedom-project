@@ -424,6 +424,65 @@ if (levelIdx < LEVELS.length - 1) {
 Next Steps: Work on modifying the new level and create a new one after it
 
 
+### 2/24/25
+
+* I created two additional levels and modified them with sprites of appropriate sizes using symbols and brackets in my `LEVELS` variable.
+    * I made it so that with each level, the difficulty increased.
+``` JS
+const LEVELS = [
+[
+		" @        /      /    	",
+		"=====================  ",
+		"						",
+		"        			    ",
+		"       >  ///   ///    /     ",
+		"       ================= ",
+
+
+	],
+	[
+		"  /              /   ",
+		"  =              =   ",
+		"   @    =            ",
+		"   =        /  =      ",
+		"     /      =      >  ",
+		"     =             =  ",
+	]
+]
+```
+
+
+* I added a new camera feature using two separate `camPos` enwrapped in `.onUpdate` and  a new component of `.onPhysicsResolve` so that it is always zoomed in onto the user sprite.
+
+``` JS
+player.onUpdate(() => {
+		camPos(player.worldPos())
+	})
+
+	player.onPhysicsResolve(() => {
+		camPos(player.worldPos())
+	})
+```
+
+NOTE: `onPhysicsResolve` is more of an additional component that ensures a smooth movement tracking system when a user sprite lands onto the ground. `.onUpdate` alone would lock the camera position onto the user on every frame. These components also reduce the need to use media queries since it would be responsive for all device screen sizes.
+
+
+* I also learned the `fixed` component on the documenetation. I used `fixed()`  on the score counter text in the `add` component to prevent it from exiting the screen when a user jumped in the obstacle courses.
+    * I also used `pos` and set the value to (12,12) so that it would be perfectly in the top left of the screen.
+
+``` JS
+const scoreLabel = add([
+		text(score),
+		pos(12,12),
+		fixed(),
+	])
+```
+NOTE: The main function of `fixed()` is to make a component unaffect by the camera.
+
+Next Steps: Add coins and more levels while also modifying them
+
+
+
 <!--
 
 ### X/X/XX:
