@@ -477,7 +477,7 @@ const scoreLabel = add([
 		fixed(),
 	])
 ```
-NOTE: The main function of `fixed()` is to make a component unaffect by the camera.
+NOTE: The main function of `fixed()` is to make a component unaffected by the camera.
 
 Next Steps: Add coins and more levels while also modifying them
 
