@@ -487,7 +487,73 @@ NOTE: `setBackground` uses RGB values. Additionally, you can also create a backg
 
 Next Steps: Add coins and more levels while also modifying them
 
+### 3/3/25
 
+* I created a pause method in my game using `onKeyPress`, conditional statements, and variations of the `pause` components.
+    * This would allow a user to pause their game whenever they desired by pressing a specific key.
+
+``` JS
+let userPause = null
+	onKeyPress("p", () => {
+		game.paused = !game.paused
+		if (userPause) userPause.cancel()
+		userPause = tween(
+			menu.pos,
+			game.paused ? center() : center().add(0, 700),
+			1,
+			(p) => menu.pos = p,
+			easings.easeOutElastic,
+		)
+		if (game.paused) {
+			menu.hidden = false
+			menu.paused = false
+		} else {
+			userPause.onEnd(() => {
+				menu.hidden = true
+				menu.paused = true
+			})
+		}
+	})
+
+    const menu = add([
+		rect(300, 400),
+		color(255, 255, 255),
+		outline(4),
+		anchor("center"),
+		pos(center().add(0, 700)),
+	])
+
+
+```
+
+NOTE: The variable userPause holds the animation that brings out the rectangle down by certain pixels when a user decides to press "p". The lower conditional statement makes it so that if a user pauses their game, `menu` would not be hidden and display the primitive on the screen. Otherwise if the pause time is ended, it makes it hidden.
+NOTE #2: `game.paused = !game.paused` checks whether pause is active or not.
+
+* Additionally, I tested out dynamic scaling methods on sprites using `onMouseMove` and dimensonal components such as `spr.width`, `spr.height`, `mousePos.x`, `mousePos.y`.
+    * This allows a mouse to scale out sprites to any sizes being based on its position.
+``` JS
+const spr = add([
+	sprite("spike"),
+])
+
+onMouseMove(() => {
+	const mpos = mousePos()
+	spr.width = mpos.x
+	spr.height = mpos.y
+})
+```
+NOTE: `.height` and `.width` will constantly change to match the (x,y) values on the coordinate plane, allowing it to grow smaller or bigger based on certain positions.
+
+* I also tried out using `onMouseMove` and `addKaboom` by making it add a new sprite on the mouse position everytime it moves around.
+
+``` JS
+addKaboom(center())
+onMouseMove(() => addKaboom(mousePos()))
+```
+
+NOTE: `addKaboom(center())` is a default sprite made by the developers. The center tag allows the sprite to be centered at a designated positon everytime it is being added.
+
+Next Steps: Continue to learn more components, referring to the Kaboom documentation, and prepare to create new modifications on my levels
 
 <!--
 
