@@ -517,10 +517,10 @@ let userPause = null
 
     const menu = add([
 		rect(300, 400),
-		color(255, 255, 255),
-		outline(4),
+		color(255, 0, 0),
+		outline(2),
 		anchor("center"),
-		pos(center().add(0, 700)),
+		pos(center().add(0, 500)),
 	])
 
 
@@ -553,8 +553,74 @@ onMouseMove(() => addKaboom(mousePos()))
 
 NOTE: `addKaboom(center())` is a default sprite made by the developers. The center tag allows the sprite to be centered at a designated positon everytime it is being added.
 
-Next Steps: Continue to learn more components, referring to the Kaboom documentation, and prepare to create new modifications on my levels
+Next Steps: Continue to learn more components, referring to the Kaboom documentation, and prepare to create new modifications in my game
 
+### 3/17/25
+* I created a start button in my game, which the user had to press before starting the interactive experience.
+    * Inside a function hold three parameters one of which was text, I created the button itself using a variable and dimensional components within it. I then
+      used the `add` component to the button variable to add a text based on the parameter input.
+``` JS
+function button(txt, p, f) {
+
+    const btn = add([
+		rect(240, 80, { radius: 8 }),
+		pos(p),
+		area(),
+		scale(1),
+		anchor("center"),
+		outline(4),
+	])
+
+    btn.add([
+		text(txt),
+		anchor("center"),
+		color(0, 0, 0),
+	])
+
+    btn.onClick(f)
+	return btn
+    addButton("Start", vec2(200, 100), () => start())
+```
+NOTE: The `btn.onClick(f)` makes it so that once the button is clicked, the "f" parameter runs. In this case, the button will go to `start()` which is the function that brings a user into the game. Vectors are points within the game scene. They are essentially coordinate points but with more functions relating to physics.
+
+* I added a new tag on a portal sprite that I already added into the game and duplicated with a new symbol. The purpose of it was to make it so that one of the two portals would lead a user sprite to the losing scene.
+    * This is a vital component of my desired product where a user has to answer a question between two portals that were answer choices.
+
+```JS
+  const LEVELS =
+    "(": () => [
+        sprite("pov"),
+        area(),
+        anchor("bot"),
+        scale(.15),
+        "danger",
+  ],
+
+  player.onCollide("danger", () => {
+            go("lose", { score: score })
+        })
+
+  scene("lose", ({ score }) => {
+        add([
+            text(`You beat ${score} level(s)... Try again!`),
+            pos(12),
+        ])
+
+```
+NOTE: The ` { score: score }` code portion takes in the score at the moment when the user collides with a spike sprite. This makes it so that when the user sprite is sent to the "lose" scene, there would be a definite `score` value to display. If the code is not there, an error would run.
+
+* I also learned th concept of hover. Using `hover()` and `hoverEnd()`, I was able to make my user sprite (nicknamed with the tag "nerd") change colors whenever it was being hovered on and not.
+
+``` JS
+nerd.onHover(() => {
+	redBean.color = BLUE
+})
+nerd.onHoverEnd(() => {
+	redBean.color = RED
+})
+```
+
+Next Steps: Continue to learn more components and start to transfer most of my knowledge and resort to building a viable educational game with my partner
 <!--
 
 ### X/X/XX:
