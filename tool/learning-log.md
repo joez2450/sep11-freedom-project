@@ -609,7 +609,7 @@ NOTE: The `btn.onClick(f)` makes it so that once the button is clicked, the "f" 
 ```
 NOTE: The ` { score: score }` code portion takes in the score at the moment when the user collides with a spike sprite. This makes it so that when the user sprite is sent to the "lose" scene, there would be a definite `score` value to display. If the code is not there, an error would run.
 
-* I also learned th concept of hover. Using `hover()` and `hoverEnd()`, I was able to make my user sprite (nicknamed with the tag "nerd") change colors whenever it was being hovered on and not.
+* I also learned the concept of hover. Using `hover()` and `hoverEnd()`, I was able to make my user sprite (nicknamed with the tag "nerd") change colors whenever it was being hovered on and not.
 
 ``` JS
 nerd.onHover(() => {
@@ -621,6 +621,69 @@ nerd.onHoverEnd(() => {
 ```
 
 Next Steps: Continue to learn more components and start to transfer most of my knowledge and resort to building a viable educational game with my partner
+
+
+### 3/24/25
+* I worked with Kyle this week and added new levels with unique block, trap, and coin placements
+    * We also rearranged the symbols so that "=" represented blocks, "@" was the user sprite, and ">" were the spikes. The "$" represented the coins.
+
+* I also worked with Kyle to add a new coin counter that was below the level one.
+    * I declared a new variable `cScore` and set the value to an `add` component. Within the `add()`, I added a `text()` with the value `"Coins:" + " " + coinScore`. I also positioned the text to the top left corner of the game scene and used `fixed()` to keep it in place. I also made it so that the score was brought onto a new level by updating the game scene.
+    * Kyle worked on adding `coinScore` onto the scene parameter and popping the coin and increasing the `coinScore` number count within the `.onCollide` function.
+
+```JS
+// Game Scene
+scene("game", ({ levelIdx, stageScore, coinScore }) => {
+ if (levelIdx < LEVELS.length - 1) {
+    go("game", {
+    levelIdx: levelIdx + 1,
+    stageScore: stageScore,
+    coinScore: coinScore,
+    })
+    } else {
+    go("win", { stageScore: stageScore, coinScore: coinScore })
+}
+
+// Collision
+player.onCollide("coin", (coin) => {
+		destroy(coin)
+		coinScore++;
+		cScore.text = "Coins:" + " " + coinScore;
+	})
+
+// Coin Counter
+const cScore = add([
+		text("Coins:" + " " + coinScore),
+		pos(15, 60),
+        fixed(),
+	])
+
+```
+
+NOTE: `levelIdx` represents the amount of levels within a scene. `coinScore` and `stageScore` have to be frequently called in all places in the code so the computer knows the updated value to display. Otherwise, an error would occur.
+
+* I also adjusted the gravity of the userSprite so that it was challenging but still possible to make certain obstacle jumps:
+
+```JS
+    k.setGravity(1300);
+```
+
+* At last, I learned the concept of mass. I created a new block that had the used `body({ mass: 10})` and placed it in my game using the comma symbol.
+
+``` JS
+",": () => [
+    sprite("block"),
+    area(),
+    scale(0.15),
+    pos(0, 200),
+    body({ mass: 10}),
+    anchor("bot"),
+],
+```
+
+NOTE: Mass makes a body not static. It gives it a weight that a user can push off.
+Next Steps: Continue to work on my MVP with Kyle and make new revisions in the game
+
 <!--
 
 ### X/X/XX:
