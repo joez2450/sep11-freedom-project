@@ -1,8 +1,13 @@
 # Entry 6
 ##### 5/16/25
 
-Ever since the last blog, I have modified my MVP with Kyle with Beyond MVP suggestions that were given to us during a gallery walk activity in class.
+Ever since the last blog, I have modified my MVP with Kyle with Beyond MVP suggestions that were given to us during a gallery walk activity in class. The most called for feature was checkpoints.
 
+Kyle and I thought out how to exactly make a checkpoint. We came up with an idea to use conditionals to receive an input from the user as to which level they wanted to go to. However, we wanted to also make it so that a user could only teleport back to either a level they are currently on or previously achieved.
+
+Working together on this feature, Kyle created a new variable `levelWhat` which asked a user the prompt of which level they wanted to restart at. We added `parseInt` to convert the user's string response to an integer to compare it later on using operators. We then added a new conditional that checked if `levelWhat` was either greater than or equal to `stageScore`, which stored the level index. If the condition was satified, a `go` function would run bringing a user back into the game scene. We set the `levelIdx` to be `levelWhat - 1` since it acts as an array and the levels were organized based on zero based index counting. We also set the `coinScore` to zero and `stageScore` to `levelWhat` to reset the coin counter and match the level that the user desires to go back to.
+
+After we completed the checkpoint, we created presentation slides that included our purpose of the game, process, challenges, and takeaways. For the in-class presentation, Kyle and I created a plethora of slides, trying to keep each of them short yet concise and meaningful. Towards the Expo showcase, we edited our slides and hid some from the presentation mode so that the presentation was short and could fit within the 1 minute timer and conveyed our main points.
 
 
 ### EDP
@@ -10,11 +15,8 @@ Currently in the Engineering Design Process, I have already completed the sevent
 
 ### Takeaways/Skills
 
-####
-While creating presentation slides, I needed to find a way with Kyle to effectively convey our project without large chunks of texts. Our goal was to be minimalistic in the amount of text we would write. We spent a chunk of time planning out the outline of our presentation slides. Afterward, we created each slides accordingly to our plan, putting no more than 3 bullet points per slides.
-
 #### Less is More
-During the Expo showcase, Kyle and I learned that elevator pitches had to be condensed to ideally 3-4 slides while containing small text but that also captured the essence of the project. While we presented, I realized that we had a little too much slides to present within the one minute time mark, which limited the amount of time we could have delegated towards our live demonstration of the platformer game. 
+During the Expo showcase, Kyle and I learned that elevator pitches had to be condensed to ideally 3-4 slides while containing small text but that also captured the essence of the project. While we presented, I realized that we had a little too much slides to present within the one minute time mark, which limited the amount of time we could have delegated towards our live demonstration of the platformer game.
 
 
 [Previous](entry05.md) | [Next](entry07.md)
